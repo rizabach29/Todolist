@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#6200EE</color>
+    <color name="colorPrimaryDark">#3700B3</color>
+    <color name="colorAccent">#03DAC5</color>
+
+
+    <!--My Color-->
+    <color name="myPrimary">#DA5552</color>
+    <color name="myPrimaryDark">#CC444B</color>
+    <color name="myText">#444444</color>
+    <color name="myTextLight">#FFFFFF</color>
+    <color name="myLightBackground">#E4B1AB</color>
+    <color name="myTransparent">#CC444B7E</color>
+    <color name="myLayoutColor">#EDF1F9</color>
+
+    <!--pallete one-->
+    <color name="pantoneDark331c">#017787</color>
+    <color name="pantoneOne">#01B0C8</color><!--3DAEBD-->
+    <color name="pantoneTwo">#30CBE1</color>
+    <color name="pantoneTree">#5BD4E5</color>
+    <color name="pantoneTransparent">#6605c3de</color>
+    <color name="pantoneDarkTransparent">#8c017787</color>
+    <color name="pantone331c">#05c3de</color>
+
+
+    <!--My Color-->
+    <color name="a">#017787</color>
+    <color name="b">#01B0C8</color><!--3DAEBD-->
+    <color name="c">#30CBE1</color>
+
+</resources>

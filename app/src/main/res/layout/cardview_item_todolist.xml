@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardViewTodolist"
+        android:layout_width="fill_parent"
+        android:layout_height="60dp"
+        android:layout_gravity="center"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="3dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginBottom="5dp"
+        android:foreground="?android:attr/selectableItemBackground"
+        app:cardBackgroundColor="?attr/panelColor"
+        card_view:cardCornerRadius="7dp"
+        card_view:contentPadding="10dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/relativeLayout2"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+
+            <TextView
+                android:id="@+id/tvTodolistTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="1dp"
+                android:text="Judul Todo List"
+                android:textColor="?attr/textDarkColor"
+                android:textStyle="bold"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvTodolistDescription"
+                android:layout_width="282dp"
+                android:layout_height="wrap_content"
+                android:text="Deskripsi pekerjaan yang harus anda lakukan"
+                android:textColor="?attr/textDarkColor"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.011"
+                app:layout_constraintLeft_toLeftOf="@+id/tvTodolistTitle"
+                app:layout_constraintStart_toStartOf="@+id/tvTodolistTitle"
+                app:layout_constraintTop_toBottomOf="@+id/tvTodolistTitle"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <CheckBox
+                android:id="@+id/checkBox2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="5dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+</LinearLayout>
