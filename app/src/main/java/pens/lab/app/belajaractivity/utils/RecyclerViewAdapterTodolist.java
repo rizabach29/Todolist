@@ -1,7 +1,5 @@
 package pens.lab.app.belajaractivity.utils;
 
-import android.content.Intent;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -10,7 +8,7 @@ import android.widget.TextView;
 import java.util.ArrayList;
 
 import androidx.recyclerview.widget.RecyclerView;
-import pens.lab.app.belajaractivity.FirstActivity;
+
 import pens.lab.app.belajaractivity.R;
 import pens.lab.app.belajaractivity.data.model.Task;
 

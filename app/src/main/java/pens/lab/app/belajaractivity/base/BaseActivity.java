@@ -9,8 +9,6 @@ import pens.lab.app.belajaractivity.R;
 
 
 public abstract  class BaseActivity extends FragmentActivity implements FragmentListener{
-
-
     protected BaseFragment currentFragment;
 
     @Override
