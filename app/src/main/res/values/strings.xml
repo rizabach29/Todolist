@@ -1,4 +1,9 @@
 <resources>
     <string name="app_name">Todoist</string>
 
+    <string name="validation_email_must_be_valid">Email must be valid</string>
+    <string name="validation_email_should_not_empty">Email is empty</string>
+    <string name="validation_name_should_not_empty">Name is empty</string>
+    <string name="validation_password_should_not_empty">Password is empty</string>
+    <string name="validation_confirm_password_should_not_empty">Confirmation Password is empty</string>
 </resources>

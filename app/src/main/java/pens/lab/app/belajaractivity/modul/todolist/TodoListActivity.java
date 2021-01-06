@@ -20,9 +20,5 @@ public class TodoListActivity extends BaseFragmentHolderActivity {
 
         todoListFragment = new TodoListFragment();
         setCurrentFragment(todoListFragment, false);
-
     }
-
-
-
 }

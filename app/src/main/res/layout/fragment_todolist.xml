@@ -34,12 +34,17 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:paddingTop="24sp"
+            android:paddingLeft="24sp"
+            android:paddingRight="24sp">
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/recyclerViewTodolist"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent" />
+                android:layout_height="match_parent"
+                tools:itemCount="14"
+                tools:listitem="@layout/cardview_item_todolist" />
         </LinearLayout>
     </ScrollView>
 

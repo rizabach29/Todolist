@@ -14,18 +14,12 @@ import pens.lab.app.belajaractivity.base.BaseFragment;
 import pens.lab.app.belajaractivity.data.model.Task;
 import pens.lab.app.belajaractivity.modul.todolist.TodoListActivity;
 
-
-/**
- * Created by fahrul on 13/03/19.
- */
-
 public class EditTaskFragment extends BaseFragment<EditTaskActivity, EditTaskContract.Presenter> implements EditTaskContract.View {
 
-    EditText etTaskTitle;
-    EditText etTaskDescription;
-    Button btnSave;
-    String id;
-
+    private EditText etTaskTitle;
+    private EditText etTaskDescription;
+    private Button btnSave, btnShare;
+    private String id;
 
     public EditTaskFragment() {
     }
@@ -35,12 +29,13 @@ public class EditTaskFragment extends BaseFragment<EditTaskActivity, EditTaskCon
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         super.onCreateView(inflater, container, savedInstanceState);
         fragmentView = inflater.inflate(R.layout.fragment_task, container, false);
-        mPresenter = new EditTaskPresenter(this);
+        mPresenter = new EditTaskPresenter(this, getActivity());
         mPresenter.start();
 
         etTaskTitle = fragmentView.findViewById(R.id.etTaskTitle);
         etTaskDescription = fragmentView.findViewById(R.id.etTaskDescription);
         btnSave = fragmentView.findViewById(R.id.btnSave);
+        btnShare = fragmentView.findViewById(R.id.btnShare);
         btnSave.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -48,7 +43,14 @@ public class EditTaskFragment extends BaseFragment<EditTaskActivity, EditTaskCon
             }
         });
 
-        setTitle("Add New Task");
+        btnShare.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                setShareTask();
+            }
+        });
+
+        setTitle("Edit Task");
         mPresenter.loadData(this.id);
 
         return fragmentView;
@@ -83,4 +85,8 @@ public class EditTaskFragment extends BaseFragment<EditTaskActivity, EditTaskCon
         this.id=id;
     }
 
+
+    public void setShareTask() {
+        mPresenter.shareTask();
+    }
 }

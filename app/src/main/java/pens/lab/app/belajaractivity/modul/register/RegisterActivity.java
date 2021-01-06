@@ -1,12 +1,12 @@
-package pens.lab.app.belajaractivity.modul.edittask;
+package pens.lab.app.belajaractivity.modul.register;
 
 import android.view.View;
 
 import pens.lab.app.belajaractivity.base.BaseFragmentHolderActivity;
 
 
-public class EditTaskActivity extends BaseFragmentHolderActivity {
-    EditTaskFragment editTaskFragment;
+public class RegisterActivity extends BaseFragmentHolderActivity {
+    RegisterFragment registerFragment;
     private final int UPDATE_REQUEST = 2019;
 
     @Override
@@ -18,10 +18,12 @@ public class EditTaskActivity extends BaseFragmentHolderActivity {
 //        ivIcon.setImageResource(R.drawable.....);
         ivIcon.setVisibility(View.VISIBLE);
 
-        editTaskFragment = new EditTaskFragment();
-        String id = getIntent().getExtras().getString("TaskId");
-        editTaskFragment.setId(id);
-        setCurrentFragment(editTaskFragment, false);
+        registerFragment = new RegisterFragment();
+        setCurrentFragment(registerFragment, false);
+
     }
+
+
+
 
 }

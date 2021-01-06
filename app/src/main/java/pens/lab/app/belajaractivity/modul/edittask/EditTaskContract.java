@@ -18,5 +18,6 @@ public interface EditTaskContract {
     interface Presenter extends BasePresenter {
         void saveData(String title, String description);
         void loadData(String id);
+        void shareTask();
     }
 }

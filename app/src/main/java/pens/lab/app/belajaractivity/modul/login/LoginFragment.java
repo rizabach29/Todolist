@@ -7,24 +7,22 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 
 
 import androidx.annotation.Nullable;
 import pens.lab.app.belajaractivity.R;
 import pens.lab.app.belajaractivity.base.BaseFragment;
 import pens.lab.app.belajaractivity.data.source.sharedPreference.UserSessionRepository;
+import pens.lab.app.belajaractivity.modul.register.RegisterActivity;
 import pens.lab.app.belajaractivity.modul.todolist.TodoListActivity;
-
-
-/**
- * Created by fahrul on 13/03/19.
- */
 
 public class LoginFragment extends BaseFragment<LoginActivity, LoginContract.Presenter> implements LoginContract.View {
 
     EditText etEmail;
     EditText etPassword;
     Button btnLogin;
+    TextView tvRegister;
 
     public LoginFragment() {
     }
@@ -34,12 +32,20 @@ public class LoginFragment extends BaseFragment<LoginActivity, LoginContract.Pre
     public android.view.View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         super.onCreateView(inflater, container, savedInstanceState);
         fragmentView = inflater.inflate(R.layout.fragment_login, container, false);
-        mPresenter = new LoginPresenter(this, new UserSessionRepository(getActivity()));
+        mPresenter = new LoginPresenter(this, new UserSessionRepository(getActivity()), getContext());
         mPresenter.start();
 
         etEmail = fragmentView.findViewById(R.id.et_email);
         etPassword = fragmentView.findViewById(R.id.et_password);
         btnLogin = fragmentView.findViewById(R.id.bt_login);
+        tvRegister = fragmentView.findViewById(R.id.registerBtn);
+
+        tvRegister.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                setBtRegisterClick();
+            }
+        });
         btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -50,6 +56,12 @@ public class LoginFragment extends BaseFragment<LoginActivity, LoginContract.Pre
         setTitle("Login");
 
         return fragmentView;
+    }
+
+    public void setBtRegisterClick() {
+        Intent intent = new Intent(activity, RegisterActivity.class);
+        startActivity(intent);
+        activity.finish();
     }
 
     public void setBtLoginClick(){
@@ -65,8 +77,8 @@ public class LoginFragment extends BaseFragment<LoginActivity, LoginContract.Pre
 
     @Override
     public void redirectToHome() {
-            Intent intent = new Intent(activity, TodoListActivity.class);
-            startActivity(intent);
-            activity.finish();
+        Intent intent = new Intent(activity, TodoListActivity.class);
+        startActivity(intent);
+        activity.finish();
     }
 }

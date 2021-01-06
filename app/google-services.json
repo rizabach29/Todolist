@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "800245860507",
+    "firebase_url": "https://todolist-76052-default-rtdb.firebaseio.com",
+    "project_id": "todolist-76052",
+    "storage_bucket": "todolist-76052.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:800245860507:android:4ff8e35d8a5e6a1b339e3e",
+        "android_client_info": {
+          "package_name": "pens.lab.app.belajaractivity"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "800245860507-85haq203au5vl7sn975ln7bkqqn95mbk.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "pens.lab.app.belajaractivity",
+            "certificate_hash": "37f614d09db48468aafcdae57c018d75c8c9fd03"
+          }
+        },
+        {
+          "client_id": "800245860507-tchp1edrj65iblitto8k0fdb2u6rg3k4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyChuRp88cYyH3PDBzm7e9IkZFUegCKKT2o"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "800245860507-tchp1edrj65iblitto8k0fdb2u6rg3k4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

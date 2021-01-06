@@ -1,14 +1,15 @@
-package pens.lab.app.belajaractivity.modul.login;
+package pens.lab.app.belajaractivity.modul.register;
 
 import pens.lab.app.belajaractivity.base.BasePresenter;
 import pens.lab.app.belajaractivity.base.BaseView;
 
-public interface LoginContract {
+
+public interface RegisterContract {
     interface View extends BaseView<Presenter> {
-        void redirectToHome();
+        void redirectToLogin();
     }
 
     interface Presenter extends BasePresenter {
-        void performLogin(String email, String password);
+        void performRegister(String name, String email, String gender, String password);
     }
 }

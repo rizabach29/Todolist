@@ -28,6 +28,9 @@ public abstract  class BaseActivity extends FragmentActivity implements Fragment
 
         if (currentFragment != null && addToBackStack) {
             fragmentTransaction.addToBackStack(currentFragment.getTitle());
+        } else {
+            for(int i = 0; i < fragmentManager.getBackStackEntryCount(); ++i)
+                fragmentManager.popBackStack();
         }
 
         fragmentTransaction.replace(R.id.flFragmentContainer, fragment, fragment.getTitle());
@@ -35,7 +38,4 @@ public abstract  class BaseActivity extends FragmentActivity implements Fragment
 
         this.currentFragment = fragment;
     }
-
-
-
 }

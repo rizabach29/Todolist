@@ -14,9 +14,9 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
         android:layout_marginLeft="32dp"
-        android:layout_marginTop="1dp"
         android:layout_marginEnd="32dp"
         android:layout_marginRight="32dp"
+        android:layout_marginBottom="16dp"
         android:ems="10"
         android:hint="Title"
         android:inputType="textPersonName"
@@ -31,6 +31,7 @@
         android:id="@+id/etTaskDescription"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
         android:ems="10"
         android:hint="Description"
         android:inputType="textPersonName"
@@ -52,4 +53,15 @@
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="@+id/etTaskTitle"
         app:layout_constraintTop_toBottomOf="@+id/etTaskDescription" />
+
+    <Button
+        android:id="@+id/btnShare"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Share Task"
+        android:background="#EEE"
+        app:layout_constraintEnd_toEndOf="@+id/btnSave"
+        app:layout_constraintStart_toStartOf="@+id/btnSave"
+        app:layout_constraintTop_toBottomOf="@+id/btnSave" />
 </androidx.constraintlayout.widget.ConstraintLayout>

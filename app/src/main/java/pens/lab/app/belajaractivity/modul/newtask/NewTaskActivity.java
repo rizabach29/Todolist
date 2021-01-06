@@ -22,8 +22,4 @@ public class NewTaskActivity extends BaseFragmentHolderActivity {
         setCurrentFragment(newTaskFragment, false);
 
     }
-
-
-
-
 }
